@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SPARK - Revolutionary Crypto Token</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: url('./820e68c2-8e6b-40b1-89e7-650fea68e106.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-blend-mode: multiply; /* Darkens the background image */
+            color: #e0e0ff; /* Light purple-white text for mystic feel */
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        .page-overlay {
+            background: linear-gradient(135deg, rgba(5, 2, 15, 0.92), rgba(10, 5, 25, 0.92), rgba(15, 5, 30, 0.92));
+            min-height: 100vh;
+            padding: 20px 0;
+            backdrop-filter: blur(5px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(100, 80, 200, 0.3);
+            background: rgba(10, 5, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #00c6ff;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff8a00, #e52e71, #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .token-address {
+            background: rgba(40, 20, 80, 0.4);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            font-family: monospace;
+            font-size: 1.2rem;
+            word-break: break-all;
+            border: 1px solid rgba(130, 90, 220, 0.4);
+            box-shadow: 0 0 20px rgba(100, 60, 200, 0.2);
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(100, 60, 200, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(130, 90, 220, 0.6);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+        
+        .feature-card {
+            background: rgba(20, 10, 40, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 80, 200, 0.3);
+            transition: transform 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(100, 80, 200, 0.6);
+            box-shadow: 0 15px 30px rgba(80, 60, 200, 0.4);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-desc {
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(60, 20, 100, 0.6), rgba(20, 10, 40, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #d0c0ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(130, 90, 220, 0.3);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(130, 90, 220, 0.6);
+            background: linear-gradient(135deg, rgba(130, 90, 220, 0.7), rgba(80, 50, 180, 0.7));
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container page-overlay">
+        <header>
+            <div class="logo">
+                <img src="./11d30646-82aa-49bf-9612-2eed596eaeee.jpg" alt="$SPARK Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px;">
+                <div class="logo-text">$SPARK</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#tokenomics">Tokenomics</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- X动态墙组件 -->
+<div id="x-dynamic-wall-container" class="x-wall-section">
+    <div class="x-wall-header">
+      <h2>$SPARK 社区动态</h2>
+      <button id="refresh-x-wall" class="refresh-button">🔄 刷新</button>
+    </div>
+    <div class="x-wall-stats">
+      <div class="stat-item">
+        <span class="stat-number" id="total-tweets-count">0</span>
+        <span class="stat-label">总推文数</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="positive-sentiment">0%</span>
+        <span class="stat-label">积极情绪</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="negative-sentiment">0%</span>
+        <span class="stat-label">消极情绪</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="top-word">-</span>
+        <span class="stat-label">热门词汇</span>
+      </div>
+    </div>
+    <div id="x-tweets-container" class="x-tweets-container">
+      <div class="loading-indicator">
+        正在加载$SPARK社区动态...
+      </div>
+    </div>
+  </div>
+  
+  <style>
+  .x-wall-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .x-wall-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .x-wall-header h2 {
+    color: #1DA1F2;
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .refresh-button {
+    background: #1DA1F2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s;
+  }
+  
+  .refresh-button:hover {
+    background: #1a91da;
+  }
+  
+  .x-wall-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .stat-number {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1DA1F2;
+  }
+  
+  .stat-label {
+    font-size: 0.8em;
+    color: #8899a6;
+  }
+  
+  .loading-indicator {
+    text-align: center;
+    padding: 40px;
+    color: #8899a6;
+    font-style: italic;
+  }
+  
+  .x-tweets-container {
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  
+  .x-tweet-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .x-tweet-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(29, 161, 242, 0.2);
+  }
+  
+  .x-tweet-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .x-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  
+  .x-user-info {
+    flex: 1;
+  }
+  
+  .x-username {
+    font-weight: bold;
+    color: white;
+    display: block;
+  }
+  
+  .x-handle {
+    color: #8899a6;
+    font-size: 0.9em;
+    display: block;
+  }
+  
+  .x-verified-badge {
+    color: #1DA1F2;
+    margin-left: 5px;
+  }
+  
+  .x-tweet-text {
+    color: white;
+    margin: 10px 0;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  
+  .x-tweet-text a {
+    color: #1DA1F2;
+    text-decoration: none;
+  }
+  
+  .x-tweet-metrics {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+    color: #8899a6;
+    font-size: 0.9em;
+  }
+  
+  .x-tweet-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1DA1F2;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  
+  .x-tweet-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* 滚动条样式 */
+  .x-tweets-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .x-tweets-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+  
+  .x-tweets-container::-webkit-scrollbar-thumb {
+    background: #1DA1F2;
+    border-radius: 4px;
+  }
+  
+  .x-tweets-container::-webkit-scrollbar-thumb:hover {
+    background: #1a91da;
+  }
+  </style>
+  
+  <script>
+  // X动态墙功能
+  class XDynamicWall {
+    constructor() {
+      this.apiUrl = '/api/x-integration';
+      this.init();
+    }
+  
+    init() {
+      this.loadTweets();
+      // 每5分钟自动刷新
+      setInterval(() => {
+        this.loadTweets();
+      }, 5 * 60 * 1000);
+      
+      // 绑定刷新按钮
+      document.getElementById('refresh-x-wall').addEventListener('click', () => {
+        this.loadTweets(true);
+      });
+    }
+  
+    async loadTweets(forceRefresh = false) {
+      try {
+        // 显示加载状态
+        document.getElementById('x-tweets-container').innerHTML = 
+          '<div class="loading-indicator">加载中...</div>';
+  
+        // 获取推文数据
+        const tweetsResponse = await fetch(`${this.apiUrl}/tweets`);
+        if (!tweetsResponse.ok) {
+          throw new Error(`API请求失败: ${tweetsResponse.status}`);
+        }
+        const data = await tweetsResponse.json();
+  
+        // 更新统计数据
+        this.updateStats(data.analytics);
+  
+        // 渲染推文
+        this.renderTweets(data.tweets);
+  
+      } catch (error) {
+        console.error('加载X动态失败:', error);
+        document.getElementById('x-tweets-container').innerHTML = 
+          '<div class="loading-indicator" style="color: #ff6b6b;">加载失败，请稍后重试</div>';
+      }
+    }
+  
+    updateStats(analytics) {
+      if (analytics) {
+        document.getElementById('total-tweets-count').textContent = analytics.totalTweets || 0;
+        
+        if (analytics.sentiment) {
+          document.getElementById('positive-sentiment').textContent = 
+            `${Math.round((analytics.sentiment.positiveRatio || 0) * 100)}%`;
+          document.getElementById('negative-sentiment').textContent = 
+            `${Math.round((analytics.sentiment.negativeRatio || 0) * 100)}%`;
+        }
+        
+        if (analytics.trends && analytics.trends.topWords && analytics.trends.topWords[0]) {
+          document.getElementById('top-word').textContent = analytics.trends.topWords[0][0];
+        }
+      }
+    }
+  
+    renderTweets(tweets) {
+      if (!tweets || tweets.length === 0) {
+        document.getElementById('x-tweets-container').innerHTML = 
+          '<div class="loading-indicator">暂无$SPARK相关推文</div>';
+        return;
+      }
+  
+      const tweetsHtml = tweets.map(tweet => `
+        <div class="x-tweet-card">
+          <div class="x-tweet-header">
+            <img src="${tweet.author.profileImage || 'https://placehold.co/40x40?text=U'}" 
+                 alt="${tweet.author.name}" class="x-profile-img">
+            <div class="x-user-info">
+              <span class="x-username">${this.escapeHtml(tweet.author.name)}
+                ${tweet.author.verified ? '<span class="x-verified-badge">✓</span>' : ''}
+              </span>
+              <span class="x-handle">@${this.escapeHtml(tweet.author.username)}</span>
+            </div>
+          </div>
+          <div class="x-tweet-text">${this.formatTweetText(tweet.text)}</div>
+          <div class="x-tweet-metrics">
+            <span>❤️ ${tweet.metrics.likes}</span>
+            <span>🔄 ${tweet.metrics.retweets}</span>
+            <span>💬 ${tweet.metrics.replies}</span>
+          </div>
+          <div>
+            <a href="${tweet.url}" target="_blank" rel="noopener" class="x-tweet-link">查看原文</a>
+          </div>
+        </div>
+      `).join('');
+  
+      document.getElementById('x-tweets-container').innerHTML = tweetsHtml;
+    }
+  
+    formatTweetText(text) {
+      // 简单的链接和@用户名格式化
+      let formattedText = this.escapeHtml(text);
+      
+      // 格式化URL
+      formattedText = formattedText.replace(
+        /(https?:\/\/[^\s]+)/g, 
+        '<a href="$1" target="_blank" rel="noopener">$1</a>'
+      );
+      
+      // 格式化@用户名
+      formattedText = formattedText.replace(
+        /@(\w+)/g, 
+        '<a href="https://x.com/$1" target="_blank" rel="noopener">@$1</a>'
+      );
+      
+      // 格式化#话题
+      formattedText = formattedText.replace(
+        /#(\w+)/g, 
+        '<a href="https://x.com/hashtag/$1" target="_blank" rel="noopener">#$1</a>'
+      );
+      
+      return formattedText;
+    }
+  
+    escapeHtml(text) {
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+  }
+  
+  // 页面加载完成后初始化
+  document.addEventListener('DOMContentLoaded', function() {
+    new XDynamicWall();
+  });
+  </script>
+        <section class="hero" id="home">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <h1>$SPARK</h1>
+                <p>Igniting the Future of Decentralized Innovation</p>
+                <div class="token-address">
+                    CA: 77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS
+                </div>
+                <p>The revolutionary token powering the next generation of blockchain applications</p>
+                <button class="cta-button">BUY NOW</button>
+            </div>
+            
+            <!-- PlaySpark Banner Section -->
+            <div style="margin: 40px auto; max-width: 800px;">
+                <div style="background: linear-gradient(135deg, #0a0a23, #1a1a40); border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(0, 198, 255, 0.2);">
+                    <h2 style="font-size: 2rem; margin-bottom: 20px; color: #00c6ff;">Welcome to the PlaySpark Universe</h2>
+                    <p style="margin-bottom: 20px; opacity: 0.9;">Discover more at <a href="https://playspark.fun" target="_blank" style="color: #ff8a00; text-decoration: none;">playspark.fun</a></p>
+                    <img src="./820e68c2-8e6b-40b1-89e7-650fea68e106.jpg" alt="PlaySpark Character" style="max-width: 100%; height: auto; border-radius: 15px; margin: 0 auto; display: block; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);">
+                </div>
+            </div>
+        </section>
+        
+        <section id="features">
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-desc">Built on Solana for near-instant transactions with minimal fees</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Secure</h3>
+                    <p class="feature-desc">Advanced security protocols protecting your investment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Global</h3>
+                    <p class="feature-desc">Available worldwide with instant accessibility</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="stats">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Potential</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Trading</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Community Driven</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">🔥</span>
+                    <span class="stat-label">Hottest Meme</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="livestream" style="padding: 80px 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(45deg, #ff8a00, #e52e71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$SPARK LIVE STREAM</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto 40px;">Tune in to our live broadcasts about $SPARK developments, community updates, and market insights</p>
+            
+            <div style="max-width: 800px; margin: 0 auto; background: rgba(0, 0, 0, 0.3); border-radius: 15px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <!-- Live Stream Player -->
+                <div id="stream-player" style="position: relative; padding-top: 56.25%; /* 16:9 Aspect Ratio */">
+                    <iframe id="stream-frame" src="https://player.twitch.tv/?channel=directory&parent=localhost" frameborder="0" allowfullscreen="false" scrolling="no" height="100%" width="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                </div>
+                
+                <div style="padding: 20px; background: rgba(0, 0, 0, 0.5);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                        <div id="stream-status" style="display: flex; align-items: center; gap: 10px;">
+                            <div id="live-indicator" style="width: 12px; height: 12px; background: #e72e7b; border-radius: 50%; animation: pulse 1.5s infinite;"></div>
+                            <span>LIVE</span>
+                        </div>
+                        
+                        <div style="display: flex; gap: 15px;">
+                            <button id="stream-chat-btn" class="cta-button" style="padding: 8px 20px; font-size: 1rem; background: rgba(255, 255, 255, 0.1);">Chat</button>
+                            <button id="subscribe-btn" class="cta-button" style="padding: 8px 20px; font-size: 1rem;">Subscribe</button>
+                        </div>
+                    </div>
+                    
+                    <div id="stream-info" style="margin-top: 20px; text-align: left;">
+                        <h3 id="stream-title" style="font-size: 1.5rem; margin-bottom: 10px;">Current Stream: $SPARK Market Analysis & Updates</h3>
+                        <p id="stream-description">Join our expert team as we discuss the latest developments in the $SPARK ecosystem, market trends, and upcoming features.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <button id="stream-tab-1" class="cta-button" style="background: rgba(255, 255, 255, 0.1);">Live Events</button>
+                <button id="stream-tab-2" class="cta-button" style="background: rgba(255, 255, 255, 0.1);">Recordings</button>
+                <button id="stream-tab-3" class="cta-button" style="background: rgba(255, 255, 255, 0.1);">Schedule</button>
+            </div>
+        </section>
+        
+        <!-- Tokenomics Section -->
+        <section id="tokenomics" style="padding: 80px 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(45deg, #ff8a00, #e52e71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$SPARK TOKENOMICS</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto 40px;">Understanding the $SPARK token distribution and utility</p>
+            
+            <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                <div class="tokenomic-card" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 30px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                    <div style="font-size: 2rem; margin-bottom: 15px;">🪙</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Total Supply</h3>
+                    <p style="font-size: 1.8rem; font-weight: bold; background: linear-gradient(45deg, #ff8a00, #e52e71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1,000,000,000</p>
+                </div>
+                
+                <div class="tokenomic-card" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 30px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                    <div style="font-size: 2rem; margin-bottom: 15px;">⚖️</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Contract</h3>
+                    <p style="word-break: break-all; font-family: monospace; font-size: 0.9rem;">77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS</p>
+                </div>
+                
+                <div class="tokenomic-card" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 30px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                    <div style="font-size: 2rem; margin-bottom: 15px;">⚡</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Network</h3>
+                    <p>Solana Blockchain</p>
+                </div>
+                
+                <div class="tokenomic-card" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 30px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                    <div style="font-size: 2rem; margin-bottom: 15px;">🎯</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Utility</h3>
+                    <p>Community Token & Governance</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Roadmap Section -->
+        <section id="roadmap" style="padding: 80px 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(45deg, #00c6ff, #0072ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$SPARK ROADMAP</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto 40px;">Our journey to light up the Solana ecosystem</p>
+            
+            <div style="max-width: 1000px; margin: 0 auto; position: relative;">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                    <div class="milestone" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 25px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #ff8a00, #e52e71); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">1</div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Phase 1</h3>
+                        <p>Launch & Community Building</p>
+                        <ul style="text-align: left; margin-top: 15px; opacity: 0.8;">
+                            <li>Token launch on Solana</li>
+                            <li>Community growth initiatives</li>
+                            <li>Website & social presence</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="milestone" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 25px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #00c6ff, #0072ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">2</div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Phase 2</h3>
+                        <p>Expansion & Partnerships</p>
+                        <ul style="text-align: left; margin-top: 15px; opacity: 0.8;">
+                            <li>DEX listings</li>
+                            <li>Influencer collaborations</li>
+                            <li>Merchandise launch</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="milestone" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 25px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #00ff88, #00c6ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">3</div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Phase 3</h3>
+                        <p>Ecosystem Integration</p>
+                        <ul style="text-align: left; margin-top: 15px; opacity: 0.8;">
+                            <li>dApp development</li>
+                            <li>Governance implementation</li>
+                            <li>Cross-chain expansion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Chat Interface Section -->
+        <section id="chat-section" style="padding: 80px 0; text-align: center; position: relative;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(45deg, #00c6ff, #0072ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Chat with $SPARK Assistant</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto 40px;">Get real-time information about $SPARK, token details, and project updates</p>
+            
+            <div id="chat-container" style="max-width: 800px; margin: 0 auto; background: rgba(0, 0, 0, 0.3); border-radius: 15px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; height: 500px;">
+                <div id="chat-header" style="background: rgba(0, 0, 0, 0.5); padding: 15px 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center;">
+                    <div style="width: 12px; height: 12px; background: #2ecc71; border-radius: 50%; margin-right: 10px;"></div>
+                    <span style="font-weight: bold;">$SPARK Assistant Online</span>
+                    <div style="margin-left: auto; font-size: 0.9rem; opacity: 0.7;">Powered by AI</div>
+                </div>
+                
+                <div id="chat-messages" style="flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; background: rgba(0, 0, 0, 0.2);">
+                    <div class="message bot-message" style="text-align: left; max-width: 80%; align-self: flex-start;">
+                        <div style="background: rgba(0, 198, 255, 0.2); padding: 12px 16px; border-radius: 18px 18px 18px 4px; border: 1px solid rgba(0, 198, 255, 0.3);">
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <div style="width: 24px; height: 24px; background: linear-gradient(45deg, #00c6ff, #0072ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; margin-right: 8px;">🤖</div>
+                                <strong>$SPARK Bot</strong>
+                            </div>
+                            <div>Hello! I'm your $SPARK assistant. Ask me anything about the $SPARK token, contract address (77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS), or the project!</div>
+                        </div>
+                    </div>
+                    
+                    <div class="message user-message" style="text-align: right; max-width: 80%; align-self: flex-end;">
+                        <div style="background: rgba(255, 255, 255, 0.1); padding: 12px 16px; border-radius: 18px 18px 4px 18px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div>What's the latest news about $SPARK?</div>
+                        </div>
+                    </div>
+                    
+                    <div class="message bot-message" style="text-align: left; max-width: 80%; align-self: flex-start;">
+                        <div style="background: rgba(0, 198, 255, 0.2); padding: 12px 16px; border-radius: 18px 18px 18px 4px; border: 1px solid rgba(0, 198, 255, 0.3);">
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <div style="width: 24px; height: 24px; background: linear-gradient(45deg, #00c6ff, #0072ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; margin-right: 8px;">🤖</div>
+                                <strong>$SPARK Bot</strong>
+                            </div>
+                            <div>The $SPARK token is gaining traction on Solana! Contract: 77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS. Remember to DYOR and stay updated through our social channels!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="chat-input-area" style="padding: 15px 20px; background: rgba(0, 0, 0, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" id="chat-input" placeholder="Ask about $SPARK..." style="flex: 1; padding: 12px 16px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(0, 0, 0, 0.3); color: white; outline: none;">
+                        <button id="send-message" class="cta-button" style="padding: 12px 24px; background: linear-gradient(45deg, #00c6ff, #0072ff);">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <!-- Exchange Listings Section -->
+        <section id="exchanges" style="padding: 80px 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(45deg, #00ff88, #00c6ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$SPARK EXCHANGE LISTINGS</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto 40px;">Track live price, trading volume, and market data</p>
+            
+            <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
+                <div style="background: rgba(0, 0, 0, 0.3); border-radius: 15px; padding: 30px; border: 1px solid rgba(0, 255, 136, 0.3);">
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #00ff88;">DEX Screener</h3>
+                        <p style="margin-bottom: 20px;">View $SPARK trading pairs and real-time market information</p>
+                        <a href="https://dexscreener.com/solana/D1q7mGQBnsD5LpczBH1D2LECB6yb9vbQGkr3s4eWxo4r" target="_blank" style="display: inline-block; background: linear-gradient(45deg, #00c6ff, #0072ff); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s;">
+                            View on DEX Screener
+                        </a>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                        <div class="metric-card" style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 15px; text-align: center;">
+                            <div style="font-size: 1.8rem; margin-bottom: 10px;">📈</div>
+                            <h4 style="margin-bottom: 8px;">Price</h4>
+                            <p id="price-data" style="font-weight: bold; color: #00ff88;">Loading...</p>
+                        </div>
+                        
+                        <div class="metric-card" style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 15px; text-align: center;">
+                            <div style="font-size: 1.8rem; margin-bottom: 10px;">🔄</div>
+                            <h4 style="margin-bottom: 8px;">Volume (24h)</h4>
+                            <p id="volume-data" style="font-weight: bold; color: #00ff88;">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(0, 0, 0, 0.3); border-radius: 15px; padding: 30px; border: 1px solid rgba(255, 136, 0, 0.3);">
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #ff8a00;">Gecko Terminal</h3>
+                        <p style="margin-bottom: 20px;">Detailed pool analytics and token information</p>
+                        <a href="https://www.geckoterminal.com/solana/pools/D1q7mGQBnsD5LpczBH1D2LECB6yb9vbQGkr3s4eWxo4r?utm_source=coingecko&utm_medium=referral&utm_campaign=searchresults" target="_blank" style="display: inline-block; background: linear-gradient(45deg, #ff8a00, #e52e71); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s;">
+                            View on Gecko Terminal
+                        </a>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                        <div class="metric-card" style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 15px; text-align: center;">
+                            <div style="font-size: 1.8rem; margin-bottom: 10px;">🔷</div>
+                            <h4 style="margin-bottom: 8px;">Pool</h4>
+                            <p style="font-weight: bold; color: #ff8a00;">D1q7...xo4r</p>
+                        </div>
+                        
+                        <div class="metric-card" style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 15px; text-align: center;">
+                            <div style="font-size: 1.8rem; margin-bottom: 10px;">💎</div>
+                            <h4 style="margin-bottom: 8px;">Analytics</h4>
+                            <p style="font-weight: bold; color: #ff8a00;">Advanced</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" style="padding: 80px 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(45deg, #ff8a00, #e52e71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">FREQUENTLY ASKED QUESTIONS</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto 40px;">Learn more about $SPARK</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 20px; margin-bottom: 15px; text-align: left; border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #a080ff;">What is $SPARK?</h3>
+                    <p>$SPARK is a community-driven token on the Solana blockchain designed to bring people together through fun, engagement, and shared value.</p>
+                </div>
+                
+                <div class="faq-item" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 20px; margin-bottom: 15px; text-align: left; border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #a080ff;">Where can I buy $SPARK?</h3>
+                    <p>You can acquire $SPARK tokens through the "Buy Now" button on this page, on DEX Screener, or on supported DEXs that list our token. Always use the correct contract address: 77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS</p>
+                </div>
+                
+                <div class="faq-item" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 20px; margin-bottom: 15px; text-align: left; border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #a080ff;">What makes $SPARK special?</h3>
+                    <p>$SPARK combines fun community engagement with potential utility in the Solana ecosystem. Our cute mascot and strong community focus differentiate us from other tokens.</p>
+                </div>
+                
+                <div class="faq-item" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 20px; text-align: left; border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #a080ff;">How can I track $SPARK performance?</h3>
+                    <p>Use our DEX Screener integration to track real-time price, volume, and liquidity data. Visit: <a href="https://dexscreener.com/solana/D1q7mGQBnsD5LpczBH1D2LECB6yb9vbQGkr3s4eWxo4r" target="_blank" style="color: #00c6ff; text-decoration: none;">DEX Screener Link</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            @keyframes pulse {
+                0% { opacity: 1; }
+                50% { opacity: 0.4; }
+                100% { opacity: 1; }
+            }
+            
+            .stream-chat {
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                width: 300px;
+                height: 400px;
+                background: rgba(0, 0, 0, 0.8);
+                border-radius: 10px;
+                z-index: 1000;
+                display: none;
+            }
+            
+            .stream-chat.active {
+                display: block;
+            }
+        </style>
+        
+        <!-- X Feed Section -->
+        <section id="x-feed" style="padding: 80px 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(45deg, #ff8a00, #e52e71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">LATEST FROM X</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto 40px;">Follow our official updates and announcements</p>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="tweet-card" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 20px; text-align: left; margin-bottom: 20px; border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #8a2be2, #4b0082); display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px;">R</div>
+                        <div>
+                            <div style="font-weight: bold;">Rob Rizk</div>
+                            <div style="opacity: 0.7;">@robrizk2020</div>
+                        </div>
+                    </div>
+                    <p>🔥 BIG NEWS: $SPARK has just hit 50K holders milestone! The community is absolutely fire! 🔥 Contract: 77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS</p>
+                    <div style="display: flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(130, 90, 220, 0.3);">
+                        <span>💬 128</span>
+                        <span>🔄 512</span>
+                        <span>❤️ 2.4K</span>
+                        <span>📅 15m ago</span>
+                    </div>
+                </div>
+                
+                <div class="tweet-card" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 20px; text-align: left; margin-bottom: 20px; border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #8a2be2, #4b0082); display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px;">R</div>
+                        <div>
+                            <div style="font-weight: bold;">Rob Rizk</div>
+                            <div style="opacity: 0.7;">@robrizk2020</div>
+                        </div>
+                    </div>
+                    <p>🚀 $SPARK breaking resistance levels on all major tracking platforms! We're seeing unprecedented organic growth. DYOR and enjoy the ride! 🚀</p>
+                    <div style="display: flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(130, 90, 220, 0.3);">
+                        <span>💬 89</span>
+                        <span>🔄 342</span>
+                        <span>❤️ 1.8K</span>
+                        <span>📅 2h ago</span>
+                    </div>
+                </div>
+                
+                <div class="tweet-card" style="background: rgba(30, 15, 60, 0.6); border-radius: 15px; padding: 20px; text-align: left; margin-bottom: 20px; border: 1px solid rgba(130, 90, 220, 0.3); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #8a2be2, #4b0082); display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px;">R</div>
+                        <div>
+                            <div style="font-weight: bold;">Rob Rizk</div>
+                            <div style="opacity: 0.7;">@robrizk2020</div>
+                        </div>
+                    </div>
+                    <p>💡 Community spotlight: The $SPARK ecosystem is expanding beyond just a token. Stay tuned for exciting partnerships and utilities coming soon! 💡</p>
+                    <div style="display: flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(130, 90, 220, 0.3);">
+                        <span>💬 67</span>
+                        <span>🔄 210</span>
+                        <span>❤️ 1.2K</span>
+                        <span>📅 5h ago</span>
+                    </div>
+                </div>
+                
+                <a href="https://x.com/robrizk2020" target="_blank" style="display: inline-block; margin-top: 20px; background: linear-gradient(45deg, #00c6ff, #0072ff); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">Follow @robrizk2020</a>
+            </div>
+        </section>
+        
+        <footer id="community">
+            <h2>Join the $SPARK Community</h2>
+            <div class="social-links">
+                <a href="https://x.com/robrizk2020" target="_blank" class="social-link">X</a>
+                <a href="#" class="social-link">T</a>
+                <a href="#" class="social-link">D</a>
+                <a href="#" class="social-link">T</a>
+            </div>
+            <p>CA: 77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS</p>
+            <p>© 2026 $SPARK. All rights reserved. DYOR.</p>
+        </footer>
+    </div>
+    <!-- 在您的网站模板中添加此部分 -->
+<div id="spark-x-dynamic-wall">
+    <!-- 这里将显示X动态墙 -->
+  </div>
+  
+  <script>
+  // 动态加载X动态墙
+  async function loadSparkXWall() {
+    const container = document.getElementById('spark-x-dynamic-wall');
+    
+    container.innerHTML = `
+      <style>
+        .spark-x-wall {
+          background: rgba(21, 32, 43, 0.8);
+          border: 1px solid #38444d;
+          border-radius: 12px;
+          padding: 20px;
+          margin: 20px 0;
+        }
+        
+        .x-wall-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #333;
+        }
+        
+        .x-wall-title {
+          color: #1DA1F2;
+          font-size: 1.2em;
+          font-weight: bold;
+        }
+        
+        .x-wall-refresh {
+          background: #1DA1F2;
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        .x-tweets-container {
+          max-height: 600px;
+          overflow-y: auto;
+        }
+        
+        .x-tweet-card {
+          background: #15202b;
+          border: 1px solid #38444d;
+          border-radius: 8px;
+          padding: 12px;
+          margin-bottom: 10px;
+        }
+        
+        .x-tweet-header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+        }
+        
+        .x-profile-img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+        
+        .x-user-info {
+          flex: 1;
+        }
+        
+        .x-username {
+          font-weight: bold;
+          color: white;
+        }
+        
+        .x-handle {
+          color: #8899a6;
+          font-size: 0.9em;
+        }
+        
+        .x-tweet-text {
+          color: white;
+          margin: 8px 0;
+          line-height: 1.4;
+        }
+        
+        .x-tweet-metrics {
+          display: flex;
+          gap: 15px;
+          color: #8899a6;
+          font-size: 0.9em;
+        }
+        
+        .x-tweet-link {
+          color: #1DA1F2;
+          text-decoration: none;
+          font-size: 0.9em;
+        }
+      </style>
+      
+      <div class="spark-x-wall">
+        <div class="x-wall-header">
+          <div class="x-wall-title">$SPARK 社区动态</div>
+          <button class="x-wall-refresh" onclick="refreshXWall()">🔄 刷新</button>
+        </div>
+        <div id="x-tweets-container" class="x-tweets-container">
+          <div style="text-align: center; padding: 20px; color: #8899a6;">
+            正在加载$SPARK社区动态...
+          </div>
+        </div>
+      </div>
+    `;
+    
+    await refreshXWall();
+  }
+  
+  async function refreshXWall() {
+    try {
+      const response = await fetch('/api/x-integration/tweets');
+      const data = await response.json();
+      
+      const tweetsContainer = document.getElementById('x-tweets-container');
+      
+      if (!data.tweets || data.tweets.length === 0) {
+        tweetsContainer.innerHTML = '<div style="text-align: center; padding: 20px; color: #8899a6;">暂无$SPARK相关推文</div>';
+        return;
+      }
+      
+      const tweetsHtml = data.tweets.map(tweet => `
+        <div class="x-tweet-card">
+          <div class="x-tweet-header">
+            <img src="${tweet.author.profileImage || 'https://via.placeholder.com/32'}" 
+                 alt="${tweet.author.name}" class="x-profile-img">
+            <div class="x-user-info">
+              <div class="x-username">${escapeHtml(tweet.author.name)}</div>
+              <div class="x-handle">@${escapeHtml(tweet.author.username)}</div>
+            </div>
+          </div>
+          <div class="x-tweet-text">${escapeHtml(tweet.text)}</div>
+          <div class="x-tweet-metrics">
+            <span>❤️ ${tweet.metrics.likes}</span>
+            <span>🔄 ${tweet.metrics.retweets}</span>
+            <span>💬 ${tweet.metrics.replies}</span>
+          </div>
+          <div>
+            <a href="${tweet.url}" target="_blank" rel="noopener" class="x-tweet-link">查看原文</a>
+          </div>
+        </div>
+      `).join('');
+      
+      tweetsContainer.innerHTML = tweetsHtml;
+    } catch (error) {
+      console.error('加载X动态失败:', error);
+      document.getElementById('x-tweets-container').innerHTML = 
+        '<div style="text-align: center; padding: 20px; color: #ff6b6b;">加载失败，请稍后重试</div>';
+    }
+  }
+  
+  function escapeHtml(text) {
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+  
+  // 页面加载时初始化
+  document.addEventListener('DOMContentLoaded', loadSparkXWall);
+  
+  // 每5分钟自动刷新
+  setInterval(refreshXWall, 5 * 60 * 1000);
+  </script>
+    <script>
+        // Simple animation for the hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            let scale = 1;
+            let direction = 0.001;
+            
+            function animateBackground() {
+                scale += direction;
+                if (scale > 1.05 || scale < 0.95) {
+                    direction *= -1;
+                }
+                hero.style.transform = `scale(${scale})`;
+                requestAnimationFrame(animateBackground);
+            }
+            
+            animateBackground();
+            
+            // Button click effect
+            const ctaButton = document.querySelector('.cta-button');
+            ctaButton.addEventListener('click', function() {
+                alert('Please use your preferred Solana wallet to purchase $SPARK using the token address: 77QEDhDWhMURAAv1mUJdt6noCXuMHvWgDtxDcTQqBAGS');
+            });
+        });
+    </script>
+</body>
+</html>
